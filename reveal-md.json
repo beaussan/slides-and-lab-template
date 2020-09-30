@@ -1,0 +1,6 @@
+{
+  "theme": "moon",
+  "highlight-theme": "github",
+  "title": "Devops 101",
+  "css": ["./style.css","./tailwind.css"]
+}

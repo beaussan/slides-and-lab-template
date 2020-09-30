@@ -1,0 +1,8 @@
+[build]
+  command = "yarn build"
+  publish = "dist/"
+
+  [[redirects]]
+    from = "/*"
+    to = "/slides.html"
+    status = 200

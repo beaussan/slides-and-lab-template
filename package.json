@@ -1,0 +1,38 @@
+{
+  "name": "devopse01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:slides:reveal": "reveal-md src/slides.md -w",
+    "dev:slides:css": "postcss tailwind.src.css -o tailwind.css -w",
+    "dev:slides": "npm-run-all -p dev:slides:css dev:slides:reveal",
+    "dev:lab:watcher": "node codelab-watcher.js",
+    "dev:lab:http": "http-server tmpLab -o -s",
+    "dev:lab": "npm-run-all -p dev:lab:watcher dev:lab:http",
+    "dev": "npm-run-all -p dev:slides dev:lab",
+    "pdf": "yarn build:css && reveal-md src/slides.md --print slides.pdf --print-size A4",
+    "cleenup": "rimraf dist tmpLab",
+    "build:slides:reveal": "reveal-md src/slides.md --static dist",
+    "build:slides:css": "postcss tailwind.src.css -o tailwind.css --env production",
+    "build:slides": "npm-run-all build:slides:css build:slides:reveal",
+    "build:lab": "codelab-generator src/codelab.md dist/lab",
+    "build:lab:images": "ncp ./src/img/ ./dist/lab/img/",
+    "build": "npm-run-all cleenup build:slides build:lab build:lab:images"
+  },
+  "dependencies": {
+    "node-watch": "0.6.4",
+    "reveal-md": "3.4.5",
+    "tailwindcss": "1.8.10"
+  },
+  "devDependencies": {
+    "@dxdeveloperexperience/codelab-generator": "1.0.7",
+    "autoprefixer": "9.7.4",
+    "http-server": "0.12.3",
+    "ncp": "2.0.0",
+    "npm-run-all": "4.1.5",
+    "ora": "5.1.0",
+    "postcss-cli": "7.1.0",
+    "rimraf": "3.0.2"
+  }
+}
