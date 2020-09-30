@@ -18,7 +18,10 @@
     "build:slides": "npm-run-all build:slides:css build:slides:reveal",
     "build:lab": "codelab-generator src/codelab.md dist/lab",
     "build:lab:images": "ncp ./src/img/ ./dist/lab/img/",
-    "build": "npm-run-all cleenup build:slides build:lab build:lab:images"
+    "build:fix-bower-url": "replace-in-file '<script src=\"/bower_components/' '<script src=\"./bower_components/' dist/lab/index.html",
+    "build:fix-element-url": "replace-in-file 'href=\"/elements/codelab.html' 'href=\"./elements/codelab.html' dist/lab/index.html",
+    "build:fix": "npm-run-all build:fix-element-url build:fix-bower-url",
+    "build": "npm-run-all cleenup build:slides build:lab build:lab:images build:fix"
   },
   "dependencies": {
     "node-watch": "0.6.4",
@@ -33,6 +36,7 @@
     "npm-run-all": "4.1.5",
     "ora": "5.1.0",
     "postcss-cli": "7.1.0",
+    "replace-in-file": "6.1.0",
     "rimraf": "3.0.2"
   }
 }
