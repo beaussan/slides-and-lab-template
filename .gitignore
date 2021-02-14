@@ -3,3 +3,4 @@ dist
 tailwind.css
 # Local Netlify folder
 .netlify
+.idea
