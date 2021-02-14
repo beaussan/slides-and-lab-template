@@ -4,15 +4,15 @@
 
 # Horizontal slide
 
-----
+---
 
 # Vertical slide
 
-----
+---
 
 # Vertical slide
 
-----
+---
 
 # Vertical slide
 
@@ -22,9 +22,7 @@
 
 ---
 
-
 ![gitbranch](img/simple-git-flow.jpg)
-
 
 ---
 

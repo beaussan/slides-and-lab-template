@@ -14,7 +14,7 @@ const buildApp = async () => {
   const copyOra = ora('Copy images').start();
   await cp('./src/img/', 'tmpLab/img/');
   copyOra.succeed('Images copied');
-}
+};
 
 watch('./src/codelab.md', buildApp);
 watch('./src/img', buildApp);

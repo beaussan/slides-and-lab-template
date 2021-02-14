@@ -4,3 +4,6 @@ tailwind.css
 # Local Netlify folder
 .netlify
 .idea
+dist/lab
+dist/lab/**/*
+dist/lab/*

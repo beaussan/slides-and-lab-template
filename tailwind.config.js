@@ -3,11 +3,11 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: ["src/**/*.md"],
+  purge: ['src/**/*.md'],
   theme: {
     extend: {},
   },
   variants: {},
   plugins: [],
   important: true,
-}
+};
