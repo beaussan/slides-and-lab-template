@@ -25,7 +25,7 @@
   "dependencies": {
     "node-watch": "0.7.1",
     "reveal-md": "5.0.0",
-    "tailwindcss": "2.0.3"
+    "tailwindcss": "2.0.4"
   },
   "devDependencies": {
     "@dxdeveloperexperience/codelab-generator": "git+https://github.com/beaussan/codelab-generator#patch-1",
